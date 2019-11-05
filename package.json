@@ -8,20 +8,17 @@
     "email": "raul.gonzalez@prismic.io"
   },
   "devDependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^1.19.1",
-    "now": "^15.5.0"
+    "now": "^16.4.4"
   },
   "dependencies": {
-    "next": "^8.1.0",
-    "prismic-javascript": "^2.0.3",
-    "prismic-reactjs": "^1.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "next": "^9.1.2",
+    "prismic-javascript": "^2.1.1",
+    "prismic-reactjs": "^1.1.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "scripts": {
     "dev": "now dev",
-    "nodev": "nodemon server.js",
     "now-build": "next build",
     "deploy": "now"
   },

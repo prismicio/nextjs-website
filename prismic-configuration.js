@@ -23,7 +23,7 @@ export const linkResolver = (doc) => {
 // Additional helper function for Next/Link component
 export const hrefResolver = (doc) => {
   if (doc.type === 'page') {
-    return `/page?uid=${doc.uid}`
+    return '/[uid]'
   }
   return '/'
 }

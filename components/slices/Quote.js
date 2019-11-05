@@ -18,7 +18,6 @@ const Quote = ({ slice }) => (
         color: #484D52; 
         letter-spacing : 1.14;
         line-height: 1.5em;
-        quotes: "\\201C""\\201D""\\2018""\\2019";
         text-align: center;
       }
       .quote blockquote:before,

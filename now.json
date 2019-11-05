@@ -1,9 +1,5 @@
 {
   "version": 2,
   "name": "prismic-nextjs-website",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-  "routes": [
-    { "src": "/preview", "dest": "/preview" },
-    { "src": "/(?<uid>[^/]+)$", "dest": "/page?uid=$uid" }
-  ]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

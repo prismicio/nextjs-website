@@ -223,10 +223,15 @@ img {
 }
 .wio-link:after {
   font-family: 'Material Icons';
-  content: '\\E3C9';
+  content: '\E3C9';
   color: white;
   font-size: 24px;
-}`
+}
+
+.quote blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+`
 
 export const medias = css.global`
 @media (max-width: 767px) {

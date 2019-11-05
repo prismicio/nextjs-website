@@ -11,8 +11,6 @@ const MenuLinks = ({ menu }) => (
         <NextLink
           as={linkResolver(menuLink.link)}
           href={hrefResolver(menuLink.link)}
-          passHref
-          prefetch
         >
           <a>{RichText.asText(menuLink.label)}</a>
         </NextLink>
@@ -24,7 +22,7 @@ const MenuLinks = ({ menu }) => (
 const Header = (menu) => (
   <Fragment>
     <header className='site-header'>
-      <NextLink href='/' passHref prefetch>
+      <NextLink href='/'>
         <a><div className='logo'>Example Site</div></a>
       </NextLink>
       <nav>
