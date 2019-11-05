@@ -14,7 +14,7 @@ const Page = (props) => {
   } else {
     return (
       <DefaultLayout>
-        <div className='page' data-wio-id={props.doc.id}>
+        <div className='page'>
           <Header menu={props.menu} />
           <SliceZone sliceZone={props.doc.data.page_content} />
         </div>
@@ -26,8 +26,6 @@ const Page = (props) => {
 Page.getInitialProps = async function ({ req, query }) {
   const { uid } = query
   const page = await Page.getPage(uid, req)
-  // Extra call to render the edit button, in case we've been routed client-side
-  if (process.browser) window.prismic.setupEditButton()
   return {
     doc: page.document,
     menu: page.menu,

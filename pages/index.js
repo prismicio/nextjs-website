@@ -7,7 +7,7 @@ const HomePage = (props) => (
   // With the Prismic data in this.props we can render the components for the Homepage
   // passing to each component the required object
   <DefaultLayout>
-    <div className='homepage' data-wio-id={props.doc.id}>
+    <div className='homepage'>
       <Header menu={props.menu} />
       <HomeBanner banner={props.doc.data.homepage_banner[0]} />
       <SliceZone sliceZone={props.doc.data.page_content} />
@@ -18,8 +18,6 @@ const HomePage = (props) => (
 // Fetch relevant data from Prismic before rendering
 HomePage.getInitialProps = async function ({ req }) {
   const home = await HomePage.getHomePage(req)
-  // Extra call to render the edit button, in case we've been routed client-side
-  if (process.browser) window.prismic.setupEditButton()
   return {
     doc: home.document,
     menu: home.menu
