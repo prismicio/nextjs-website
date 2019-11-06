@@ -1,12 +1,8 @@
 import React, { Fragment } from 'react'
-import { default as NextLink } from 'next/link'
-import { Link, RichText } from 'prismic-reactjs'
-import { linkResolver, hrefResolver } from 'prismic-configuration'
+import { RichText } from 'prismic-reactjs'
+import { DocLink } from 'components'
 
 const HomeBanner = ({ banner }) => {
-  let internalLink = banner.button_link.link_type === 'Document'
-  // Determines if the link is for an internal document or an external resource
-  // so it can be handled accordingly
   return (
     <Fragment>
       <section
@@ -25,28 +21,18 @@ const HomeBanner = ({ banner }) => {
           </p>
           {RichText.asText(banner.button_label) !== '' ? (
             // Displays the button link only if it's been defined
-            <NextLink
-              as={internalLink ? linkResolver(banner.button_link) : ''}
-              // No need to change how the route is shown if it's external
-              href={
-                internalLink
-                  ? hrefResolver(banner.button_link)
-                  : Link.url(banner.button_link, linkResolver)
-                // We get the url if it's an external link, otherwise we get the generated internal route
-              }
-              passHref
+            <DocLink
+              link={banner.button_link}
+              linkClass="banner-button"
             >
-              {/* Handles the link client-side if it's a Prismic document, otherwise it's just a regular href */}
-              <a className='banner-button'>
-                {RichText.asText(banner.button_label)}
-              </a>
-            </NextLink>
+              {RichText.asText(banner.button_label)}
+            </DocLink>
           ) : (
             ''
           )}
         </div>
       </section>
-      <style jsx>{`
+      <style jsx global>{`
         .homepage-banner {
           margin: -70px 0 80px;
           padding: 10em 0 8em;
