@@ -3,7 +3,7 @@ import { default as NextLink } from 'next/link'
 import { RichText } from 'prismic-reactjs'
 
 import { DocLink } from 'components'
-import { header } from 'styles'
+import { headerStyles } from 'styles'
 
 const MenuLinks = ({ menu }) => (
   menu.data.menu_links.map((menuLink) => {
@@ -29,7 +29,7 @@ const Header = (menu) => (
         </ul>
       </nav>
     </header>
-    <style jsx global>{ header }</style>
+    <style jsx global>{ headerStyles }</style>
   </Fragment>
 )
 

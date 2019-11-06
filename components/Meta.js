@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
 import { apiEndpoint } from 'prismic-configuration'
-import { reset, globals, medias } from 'styles'
+import { reset, globals } from 'styles'
 
 export default () => {
   const repoNameArray = /([^\/]+)\.cdn.prismic\.io\/api/.exec(apiEndpoint)
@@ -20,7 +20,6 @@ export default () => {
       </Head>
       <style jsx global>{ reset }</style>
       <style jsx global>{ globals }</style>
-      <style jsx global>{ medias }</style>
     </Fragment>
   )
 }

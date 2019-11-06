@@ -3,6 +3,7 @@ import { RichText } from 'prismic-reactjs'
 
 import { DocLink } from 'components'
 import { linkResolver } from 'prismic-configuration'
+import { imageHighlightStyles } from 'styles'
 
 const ImageHighlight = ({ slice }) => {
   return (
@@ -23,27 +24,7 @@ const ImageHighlight = ({ slice }) => {
           <img src={slice.primary.featured_image.url} alt={slice.primary.featured_image.alt} />
         </div>
       </section>
-      <style jsx>{`
-        .highlight {
-          position: relative;
-          overflow: auto;
-        }
-        .highlight-left {
-          width: 43%;
-          float: left;
-        }
-        .highlight-right {
-          width: 48%;
-          float: right;
-        }
-        @media (max-width: 767px) {
-          .highlight-left,
-          .highlight-right {
-            width: 100%;
-            float: none;
-          }
-        }
-      `}</style>
+      <style jsx global>{imageHighlightStyles}</style>
     </Fragment>
   )
 }
