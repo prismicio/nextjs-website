@@ -1,16 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import { quoteStyles } from 'styles'
 
 const Quote = ({ slice }) => (
-  <Fragment>
-    <section className='content-section quote'>
-      <blockquote>
-        {RichText.asText(slice.primary.quote_text)}
-      </blockquote>
-    </section>
+  <section className="content-section quote">
+    <blockquote>
+      {RichText.asText(slice.primary.quote_text)}
+    </blockquote>
     <style jsx global>{quoteStyles}</style>
-  </Fragment>
+  </section>
 )
 
 export default Quote
