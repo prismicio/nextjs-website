@@ -1,6 +1,6 @@
 {
   "name": "nextjs-website",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "private": true,
   "description": "Sample website built with Next.js using Prismic headless CMS",
   "author": {
