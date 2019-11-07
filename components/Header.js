@@ -10,19 +10,28 @@ const Header = ({ menu }) => (
     <NextLink href="/">
       <a><div className="logo">Example Site</div></a>
     </NextLink>
-    <nav>
-      <ul>
-        {menu.data.menu_links.map((menuLink, index) => (
-          <MenuLink
-            menuLink={menuLink}
-            key={`menulink-${index}`}
-          />
-        ))}
-      </ul>
-    </nav>
+    <MenuLinks menu={menu} />
     <style jsx global>{ headerStyles }</style>
   </header>
 )
+
+const MenuLinks = ({ menu }) => {
+  if (menu) {
+    return (
+      <nav>
+        <ul>
+          {menu.data.menu_links.map((menuLink, index) => (
+            <MenuLink
+              menuLink={menuLink}
+              key={`menulink-${index}`}
+            />
+          ))}
+        </ul>
+      </nav>
+    )
+  }
+  return null
+}
 
 const MenuLink = ({ menuLink }) => (
   <li>
