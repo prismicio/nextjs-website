@@ -1,35 +1,37 @@
 import React from 'react'
 import { Client } from 'prismic-configuration'
-import { Header, HomeBanner, SliceZone } from 'components'
+
 import DefaultLayout from 'layouts'
+import { Header, HomeBanner, SliceZone } from 'components'
+import Error from './_error'
 
-const HomePage = (props) => (
-  // With the Prismic data in this.props we can render the components for the Homepage
-  // passing to each component the required object
-  <DefaultLayout>
-    <div className='homepage'>
-      <Header menu={props.menu} />
-      <HomeBanner banner={props.doc.data.homepage_banner[0]} />
-      <SliceZone sliceZone={props.doc.data.page_content} />
-    </div>
-  </DefaultLayout>
-)
-
-// Fetch relevant data from Prismic before rendering
-HomePage.getInitialProps = async function ({ req }) {
-  const home = await HomePage.getHomePage(req)
-  return {
-    doc: home.document,
-    menu: home.menu
+const HomePage = ({ doc, menu }) => {
+  if (doc) {
+    return (
+      <DefaultLayout>
+        <div className='homepage'>
+          <Header menu={menu} />
+          <HomeBanner banner={doc.data.homepage_banner[0]} />
+          <SliceZone sliceZone={doc.data.page_content} />
+        </div>
+      </DefaultLayout>
+    )
   }
+
+  // Call the standard error page if the document was not found
+  return <Error statusCode="404" />
 }
 
-HomePage.getHomePage = async function (req) {
+HomePage.getInitialProps = async ({ req }) => {
   try {
-    // Queries both the homepage and navigation menu documents
-    const document = await Client(req).getSingle('homepage')
+    // Query both the homepage and navigation menu documents
+    const doc = await Client(req).getSingle('homepage')
     const menu = await Client(req).getSingle('menu')
-    return { document, menu }
+
+    return {
+      doc,
+      menu
+    }
   } catch (error) {
     console.error(error)
     return error

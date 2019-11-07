@@ -1,44 +1,38 @@
 import React from 'react'
 import { Client } from 'prismic-configuration'
-import { Header, SliceZone } from 'components'
+
 import DefaultLayout from 'layouts'
+import { Header, SliceZone } from 'components'
 import Error from './_error'
 
-const Page = (props) => {
-  if (!props.doc) {
-    return (
-      // Call the standard error page if the document was not found
-      // Essential for dealing with previews of documents that have not been published
-      <Error statusCode='404' />
-    )
-  } else {
+const Page = ({ doc, menu }) => {
+  if (doc) {
     return (
       <DefaultLayout>
-        <div className='page'>
-          <Header menu={props.menu} />
-          <SliceZone sliceZone={props.doc.data.page_content} />
+        <div className="page">
+          <Header menu={menu} />
+          <SliceZone sliceZone={doc.data.page_content} />
         </div>
       </DefaultLayout>
     )
   }
+
+  // Call the standard error page if the document was not found
+  return <Error statusCode="404" />
 }
 
-Page.getInitialProps = async function ({ req, query }) {
-  const { uid } = query
-  const page = await Page.getPage(uid, req)
-  return {
-    doc: page.document,
-    menu: page.menu,
-    uid: uid
-  }
-}
-
-Page.getPage = async function (uid, req) {
+Page.getInitialProps = async ({ req, query }) => {
   try {
-    // Queries both the specific page and navigation menu documents
-    const document = await Client(req).getByUID('page', uid)
+    const uid = query.uid
+
+    // Query both the specific page and navigation menu documents
+    const doc = await Client(req).getByUID('page', uid)
     const menu = await Client(req).getSingle('menu')
-    return { document, menu }
+
+    return {
+      doc,
+      menu
+    }
   } catch (error) {
     console.error(error)
     return error
