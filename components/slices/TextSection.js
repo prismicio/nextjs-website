@@ -1,7 +1,8 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
-import { linkResolver, customLink } from 'prismic-configuration'
+import { linkResolver } from 'prismic-configuration'
+import { customLink } from 'utils/prismicHelpers'
 import { textSectionStyles } from 'styles'
 
 const TextSection = ({ slice }) => {

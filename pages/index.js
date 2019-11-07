@@ -1,9 +1,10 @@
 import React from 'react'
-import { Client } from 'prismic-configuration'
 
 import DefaultLayout from 'layouts'
 import { Header, HomeBanner, SliceZone } from 'components'
 import Error from './_error'
+
+import { Client } from 'utils/prismicHelpers'
 
 const HomePage = ({ doc, menu }) => {
   if (doc) {
