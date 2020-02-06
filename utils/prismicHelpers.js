@@ -15,12 +15,16 @@ export const customLink = (type, element, content, children, index) => (
 )
 
 // Client method to query documents from the Prismic repo
-let frontClient
-export const Client = (req = null) => {
-  if (!req && frontClient) return frontClient // prevents generating a new instance for client side since we don't need the refreshed request object.
-  else {
-    const options = Object.assign({}, req ? { req } : {}, accessToken ? { accessToken: accessToken } : {})
-    return Prismic.client(apiEndpoint, options)
+export const Client = (req = null) => (
+  Prismic.client(apiEndpoint, createClientOptions(req, accessToken))
+)
+
+const createClientOptions = (req = null, prismicAccessToken = null) => {
+  const reqOption = req ? { req } : {}
+  const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {}
+  return {
+    ...reqOption,
+    ...accessTokenOption,
   }
 }
 
