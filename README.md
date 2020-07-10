@@ -9,7 +9,7 @@ You can use our [Prismic-CLI](https://github.com/prismicio/prismic-cli) tool to 
 
 ```
 npm install -g prismic-cli
-prismic theme https://github.com/prismicio/nextjs-website/
+prismic theme --theme-url https://github.com/prismicio/nextjs-website/
 ```
 
 ### Install dependencies
