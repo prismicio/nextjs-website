@@ -2,12 +2,11 @@ import React from 'react'
 
 import DefaultLayout from 'layouts'
 import { Header, HomeBanner, SliceZone } from 'components'
-import Error from './_error'
 
 import { Client } from 'utils/prismicHelpers'
 
 const HomePage = ({ doc, menu }) => {
-  if (doc) {
+  if (doc && doc.data) {
     return (
       <DefaultLayout>
         <div className='homepage'>
@@ -20,22 +19,24 @@ const HomePage = ({ doc, menu }) => {
   }
 
   // Call the standard error page if the document was not found
-  return <Error statusCode="404" />
+  return null
 }
 
-HomePage.getInitialProps = async ({ req }) => {
-  try {
-    // Query both the homepage and navigation menu documents
-    const doc = await Client(req).getSingle('homepage')
-    const menu = await Client(req).getSingle('menu')
+export async function getStaticProps({ preview = null, previewData = {} }) {
 
-    return {
+  const { ref } = previewData
+
+  const client = Client()
+
+  const doc = await client.getSingle('homepage', ref ? { ref } : null) || {}
+  const menu = await client.getSingle('menu', ref ? { ref } : null) || {}
+
+  return {
+    props: {
       doc,
-      menu
+      menu,
+      preview
     }
-  } catch (error) {
-    console.error(error)
-    return error
   }
 }
 

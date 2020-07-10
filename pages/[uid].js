@@ -2,12 +2,13 @@ import React from 'react'
 
 import DefaultLayout from 'layouts'
 import { Header, SliceZone } from 'components'
-import Error from './_error'
+
+import { queryRepeatableDocuments } from 'utils/queries'
 
 import { Client } from 'utils/prismicHelpers'
 
 const Page = ({ doc, menu }) => {
-  if (doc) {
+  if (doc && doc.data) {
     return (
       <DefaultLayout>
         <div className="page">
@@ -19,24 +20,32 @@ const Page = ({ doc, menu }) => {
   }
 
   // Call the standard error page if the document was not found
-  return <Error statusCode="404" />
+  return null;
 }
 
-Page.getInitialProps = async ({ req, query }) => {
-  try {
-    const uid = query.uid
 
-    // Query both the specific page and navigation menu documents
-    const doc = await Client(req).getByUID('page', uid)
-    const menu = await Client(req).getSingle('menu')
+export async function getStaticProps({ params, preview = null, previewData = {} }) {
+  const { ref } = previewData
 
-    return {
-      doc,
-      menu
+  const client = Client()
+
+  const doc = await client.getByUID('page', params.uid, ref ? { ref } : null) || {}
+  const menu = await client.getSingle('menu', ref ? { ref } : null) || {}
+  
+  return {
+    props: {
+      preview,
+      menu,
+      doc
     }
-  } catch (error) {
-    console.error(error)
-    return error
+  }
+};
+
+export async function getStaticPaths() {
+  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  return {
+    paths: documents.map(doc => `/${doc.uid}`),
+    fallback: true,
   }
 }
 
