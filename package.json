@@ -7,9 +7,6 @@
     "name": "Raul Gonzalez",
     "email": "raul.gonzalez@prismic.io"
   },
-  "devDependencies": {
-    "now": "^16.7.3"
-  },
   "dependencies": {
     "next": "^9.4.4",
     "prismic-javascript": "3.0.1",
@@ -18,9 +15,9 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "dev": "now dev",
-    "now-build": "next build",
-    "deploy": "now"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
