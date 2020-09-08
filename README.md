@@ -1,54 +1,37 @@
-[![Dependency Status](https://david-dm.org/raulg/nextjs-website.svg)](https://david-dm.org/raulg/nextjs-website)
+# Prismic Next.js Multi-Page site with navigation Example
+> [Next.js](https://nextjs.org/) example multi-Page site with navigation project with content managed in [Prismic](https://prismic.io)
 
-# nextjs-website
-This project is an implementation of the Prismic multi-page website demo using Next.js. Built up from the starter project, it's meant to provide you with an idea of how to build your own sites using the Prismic features. Read our user guide if you need guidance on how to use this repository.
-This project is serverless and ready for deployment in Now v2.
+## Check out our article for a step by step guide to getting this project up and running
+> [Prismic project guide](https://user-guides.prismic.io/en/articles/2907799-sample-multi-page-site-with-navigation-in-next-js)
 
-## Getting started quickly with Prismic Themes
-You can use our [Prismic-CLI](https://github.com/prismicio/prismic-cli) tool to quickly install this project in your machine, as well as setting up a Prismic repository with the required Custom Types. Just follow the instructions in your terminal to get started!
 
+## Install the prismic-cli
 ```
 npm install -g prismic-cli
-prismic theme --theme-url https://github.com/prismicio/nextjs-website/
 ```
 
-### Install dependencies
+## Run the theme command
+This will create a new Prismic content repository, setup the custom types, and install the project code
 ```
-npm install
-```
+prismic theme --theme-url https://github.com/prismicio/nextjs-website
 
-### Installing Now globally
-The official [recommendation](https://zeit.co/guides/updating-now-cli) is to install Now Desktop and check the Canary Releases option. This is will automatically update your now-cli package so it's always up to date. You can also install the package using NPM if you're not concerned about updates.
 ```
-npm install -g now
-```
-
-### Run serverless mode locally
-As of version 15.0.0 of `now` you can use the `now dev` command to run the project in your local machine in serverless mode. You can use this to set up and test your routing in `now.json` without having to deploy to Now for every small change. This is great for testing routing before a deployment. Development server will be running in `http://localhost:3000/`
-```
-now dev
-```
-or 
+## Run the project
 ```
 npm run dev
 ```
-
-### Deploy to Now 2.0 serverless mode
-[Signup for Now](https://zeit.co/now) for deploying your site using serverless features. The required routing and setup files are already included in the project. Just run the `now` command in your project folder if you have installed it, or try the included package.
-```
-now
-```
-or
-```
-npm run deploy
-```
+Then you can access it at [http://localhost:3000](http://localhost:3000).
 
 
-## Get started with Prismic
+## Deploys made easy with Vercel
+[Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
 
-You can find out how to get started with Prismic from [our React documentation](https://prismic.io/docs/reactjs/getting-started/prismic-nextjs).
 
-## License
+### Learn more about using Prismic with Nextjs
+
+[Prismic + Next.js documentation](https://prismic.io/docs/reactjs/getting-started/prismic-nextjs).
+
+### License
 
 This software is licensed under the Apache 2 license, quoted below.
 
