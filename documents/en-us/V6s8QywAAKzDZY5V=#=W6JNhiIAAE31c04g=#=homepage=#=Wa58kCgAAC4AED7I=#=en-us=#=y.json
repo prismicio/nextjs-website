@@ -1,0 +1,249 @@
+{
+  "homepage_banner_TYPE": "Group",
+  "homepage_banner_POSITION": 0,
+  "homepage_banner.title_TYPE": "StructuredText",
+  "homepage_banner.title_POSITION": 1,
+  "homepage_banner.tagline_TYPE": "StructuredText",
+  "homepage_banner.tagline_POSITION": 2,
+  "homepage_banner.button_link_TYPE": "Link",
+  "homepage_banner.button_link_POSITION": 3,
+  "homepage_banner.image_TYPE": "Image",
+  "homepage_banner.image_POSITION": 4,
+  "homepage_banner.button_label_TYPE": "StructuredText",
+  "homepage_banner.button_label_POSITION": 5,
+  "page_content_TYPE": "Slices",
+  "page_content_POSITION": 6,
+  "page_content.text_section_TYPE": "Slice",
+  "page_content.text_section_POSITION": 7,
+  "page_content.text_section.non-repeat.rich_text_TYPE": "StructuredText",
+  "page_content.text_section.non-repeat.rich_text_POSITION": 8,
+  "page_content.quote_TYPE": "Slice",
+  "page_content.quote_POSITION": 9,
+  "page_content.quote.non-repeat.quote_text_TYPE": "StructuredText",
+  "page_content.quote.non-repeat.quote_text_POSITION": 10,
+  "page_content.full_width_image_TYPE": "Slice",
+  "page_content.full_width_image_POSITION": 11,
+  "page_content.full_width_image.non-repeat.image_TYPE": "Image",
+  "page_content.full_width_image.non-repeat.image_POSITION": 12,
+  "page_content.image_gallery_TYPE": "Slice",
+  "page_content.image_gallery_POSITION": 13,
+  "page_content.image_gallery.non-repeat.gallery_title_TYPE": "StructuredText",
+  "page_content.image_gallery.non-repeat.gallery_title_POSITION": 14,
+  "page_content.image_gallery.repeat.image_description_TYPE": "StructuredText",
+  "page_content.image_gallery.repeat.image_description_POSITION": 15,
+  "page_content.image_gallery.repeat.link_TYPE": "Link",
+  "page_content.image_gallery.repeat.link_POSITION": 16,
+  "page_content.image_gallery.repeat.link_label_TYPE": "StructuredText",
+  "page_content.image_gallery.repeat.link_label_POSITION": 17,
+  "page_content.image_gallery.repeat.image_TYPE": "Image",
+  "page_content.image_gallery.repeat.image_POSITION": 18,
+  "page_content.image_highlight_TYPE": "Slice",
+  "page_content.image_highlight_POSITION": 19,
+  "page_content.image_highlight.non-repeat.featured_image_TYPE": "Image",
+  "page_content.image_highlight.non-repeat.featured_image_POSITION": 20,
+  "page_content.image_highlight.non-repeat.title_TYPE": "StructuredText",
+  "page_content.image_highlight.non-repeat.title_POSITION": 21,
+  "page_content.image_highlight.non-repeat.headline_TYPE": "StructuredText",
+  "page_content.image_highlight.non-repeat.headline_POSITION": 22,
+  "page_content.image_highlight.non-repeat.link_TYPE": "Link",
+  "page_content.image_highlight.non-repeat.link_POSITION": 23,
+  "page_content.image_highlight.non-repeat.link_label_TYPE": "StructuredText",
+  "page_content.image_highlight.non-repeat.link_label_POSITION": 24,
+  "slugs_INTERNAL": ["john-doe", "john-doe---zz2", "john-doe---zz"],
+  "homepage_banner": [
+    {
+      "title": [
+        { "type": "heading2", "content": { "text": "John Doe", "spans": [] } }
+      ],
+      "tagline": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede asdf.",
+            "spans": []
+          }
+        }
+      ],
+      "button_link": {
+        "id": "V6tFSiwAAEvcZbJ8",
+        "mask": "page",
+        "wioUrl": "wio://documents/V6tFSiwAAEvcZbJ8"
+      },
+      "button_label": [
+        {
+          "type": "paragraph",
+          "content": { "text": "Learn More", "spans": [] }
+        }
+      ],
+      "image": {
+        "origin": {
+          "id": "V6s-6SwAAKzDZZj0",
+          "url": "https://prismic-io.s3.amazonaws.com/sample-site%2F8ecfe46c-11f6-481b-afca-c938fade6eff_home-banner.jpg",
+          "width": 4896,
+          "height": 3264
+        },
+        "width": 2000,
+        "height": 1333,
+        "edit": {
+          "background": "#fff",
+          "zoom": 0.4084967320261438,
+          "crop": { "x": 0, "y": 0 }
+        },
+        "credits": null,
+        "alt": null,
+        "thumbnails": {},
+        "url": "https://prismic-io.s3.amazonaws.com/sample-site/444aea05b807d1fd864ef9f88903ad94006d4d28_home-banner.jpg"
+      }
+    }
+  ],
+  "page_content": [
+    {
+      "key": "text_section$29feaaa1-9c66-4ca7-a6ca-7a0b313eba0a",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "rich_text": [
+            {
+              "type": "heading1",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      },
+      "label": "2col"
+    },
+    {
+      "key": "full_width_image$29cf89c7-b81f-494c-958b-2a264b518d37",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "image": {
+            "origin": {
+              "id": "V6s8XSwAAKzDZY6_",
+              "url": "https://prismic-io.s3.amazonaws.com/sample-site%2Fd2648aad-b789-4600-b015-9e2239d89ac7_home-full-width.jpeg",
+              "width": 3396,
+              "height": 2000
+            },
+            "width": 980,
+            "height": 300,
+            "edit": {
+              "background": "#fff",
+              "zoom": 0.28857479387514723,
+              "crop": { "x": 0, "y": -139 }
+            },
+            "credits": null,
+            "alt": "Alt text example",
+            "thumbnails": {},
+            "url": "https://prismic-io.s3.amazonaws.com/sample-site/d9d90363391c0232c26ce46d69571a24d76d5975_home-full-width.jpeg"
+          }
+        }
+      }
+    },
+    {
+      "key": "image_highlight$1e18e9b0-b4b6-425a-a7d3-38c6da6229d1",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "title": [
+            {
+              "type": "heading2",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+                "spans": []
+              }
+            }
+          ],
+          "headline": [
+            {
+              "type": "heading3",
+              "content": {
+                "text": "Donec nec justo eget felis facilisis fermentum hendrerit. Phasellu aliquet nibh nec urna.",
+                "spans": []
+              }
+            }
+          ],
+          "link": {
+            "id": "V6tFSiwAAEvcZbJ8",
+            "mask": "page",
+            "wioUrl": "wio://documents/V6tFSiwAAEvcZbJ8"
+          },
+          "link_label": [
+            {
+              "type": "paragraph",
+              "content": { "text": "LEARN MORE", "spans": [] }
+            }
+          ],
+          "featured_image": {
+            "origin": {
+              "id": "V6s8pywAAMBbZY_o",
+              "url": "https://prismic-io.s3.amazonaws.com/sample-site%2F6f306737-c5ef-4761-a643-cd4025995a15_page-mountains.jpeg",
+              "width": 3872,
+              "height": 2592
+            },
+            "width": 727,
+            "height": 402,
+            "edit": {
+              "background": "#fff",
+              "zoom": 0.22175826446280994,
+              "crop": { "x": -90, "y": -26 }
+            },
+            "credits": null,
+            "alt": "Alt text example",
+            "thumbnails": {},
+            "url": "https://prismic-io.s3.amazonaws.com/sample-site/1c33e836ffe56168eea4294ec7c3539bb5eb055b_page-mountains.jpeg"
+          }
+        }
+      }
+    },
+    {
+      "key": "text_section$96e2fdb1-4ba7-45f8-84ef-e4db9b8351d7",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "rich_text": [
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      },
+      "label": "2col"
+    }
+  ],
+  "uids_INTERNAL": ["homepage"]
+}
