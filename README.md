@@ -1,41 +1,19 @@
-# Prismic Next.js Multi-Page site with navigation Example
+# Prismic & Next.js Example Multi-Page Site
 > [Next.js](https://nextjs.org/) example multi-Page site with navigation project with content managed in [Prismic](https://prismic.io)
 
-## Check out our article for a step by step guide to getting this project up and running
+## Check out the dedicated article to get this project up and running
 > [Prismic project guide](https://user-guides.prismic.io/en/articles/2907799-sample-multi-page-site-with-navigation-in-next-js)
 
 
-## Install the prismic-cli
-```
-npm install -g prismic-cli
-```
+### Learn more about using Prismic with Next.js
 
-## Run the theme command
-This will create a new Prismic content repository, setup the custom types, and install the project code
-```
-prismic theme --theme-url https://github.com/prismicio/nextjs-website
-
-```
-## Run the project
-```
-npm run dev
-```
-Then you can access it at [http://localhost:3000](http://localhost:3000).
-
-
-## Deploys made easy with Vercel
-[Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
-
-
-### Learn more about using Prismic with Nextjs
-
-[Prismic + Next.js documentation](https://prismic.io/docs/reactjs/getting-started/prismic-nextjs).
+[Prismic + Next.js documentation](https://prismic.io/docs/technologies/getting-started-nextjs).
 
 ### License
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2019 Prismic (https://prismic.io).
+Copyright 2021 [Prismic](http://prismic.io/).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
